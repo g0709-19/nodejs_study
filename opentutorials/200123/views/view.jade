@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title 글 목록
+    body
+        h1
+            a(href='/topic') Server Side JavaScript
+        ul
+            each file in files
+                li
+                    a(href="/topic/"+file)= file
+        article
+            p
+                h2= title
+            p= description
+        div
+            a(href="/topic/new")
+                button 생성
