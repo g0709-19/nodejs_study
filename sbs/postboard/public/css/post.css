@@ -1,0 +1,43 @@
+@import 'reset.css';
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: default;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post {
+    width: 50vw;
+}
+
+.card {
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.card>p {
+    padding: 5px 10px;
+}
+
+.desc {
+    margin-top: 30px;
+}
+
+.menu {
+    margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title 글 생성
+        link(rel="stylesheet", href="/css/new.css")
+    body
+        .container
+            - if (mode === 'new')
+                form(action="/post/"+mode,method="post")
+                    p
+                        label 제목
+                        input(type="text",name="title")
+                    p
+                        label 내용
+                        textarea(name="desc")
+                    .post-btn
+                        button(type="submit") 글 작성
+            - else if (mode === 'edit')
+                form(action="/post/"+mode+"/"+id,method="post")
+                    p
+                        label 제목
+                        input(type="text",name="title",value=post.title)
+                    p
+                        label 내용
+                        textarea(name="desc")= post.description
+                    .post-btn
+                        button(type="submit") 글 작성

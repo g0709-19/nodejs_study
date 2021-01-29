@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title= post.title
+        link(rel="stylesheet",href="/css/post.css")
+    body
+        .container
+            .post
+                .card
+                    p
+                        span 제목: 
+                        span= post.title
+                    p
+                        span 작성일: 
+                        span #{moment(post.date).format('YYYY/MM/DD')}
+                    p.desc= post.description
+                .menu
+                    a(href="/")
+                        button 돌아가기
+                    a(href="/post/edit/"+post.id)
+                        button 수정
+                    a(href="/post/delete/"+post.id)
+                        button 삭제

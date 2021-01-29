@@ -1,0 +1,53 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea {
+    width: 300px;
+    font-size: 15px;
+    font-family: 'Note Sans KR', sans-serif;
+    padding: 5px 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+p>label {
+    margin-right: 10px;
+}
+
+.post-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: aquamarine;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
