@@ -6,15 +6,29 @@ html
         link(rel="stylesheet", href="/css/home.css")
     body
         .container
-            ul
-                .row
-                    li 제목
-                    li 작성일
-            each post in posts
-                .row
-                    li
-                        a(href="post/"+post.id)= post.title
-                    li #{moment(post.date).format('YYYY/MM/DD')}
-            .post-btn
-                a(href="post/new")
-                    button 글 작성
+            .box
+                .auth
+                    -if (user)
+                        p= "환영합니다. " + user.id + "!"
+                        a(href="logout")
+                            button 로그아웃
+                    -else
+                        a(href="login")
+                            button 로그인
+                        a(href="register")
+                            button 회원가입
+                .post-box
+                    ul
+                        .row
+                            li 제목
+                            li 작성자
+                            li 작성일
+                        each post in posts
+                            .row
+                                li
+                                    a(href="post/"+post.id)= post.title
+                                li= post.author
+                                li #{moment(post.date).format('YYYY/MM/DD')}
+                    .post-btn
+                        a(href="post/new")
+                            button 글 작성

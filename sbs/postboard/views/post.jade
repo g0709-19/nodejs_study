@@ -17,7 +17,8 @@ html
                 .menu
                     a(href="/")
                         button 돌아가기
-                    a(href="/post/edit/"+post.id)
-                        button 수정
-                    a(href="/post/delete/"+post.id)
-                        button 삭제
+                    -if (own)
+                        a(href="/post/edit/"+post.id)
+                            button 수정
+                        a(href="/post/delete/"+post.id)
+                            button 삭제
